@@ -26,6 +26,21 @@ app.post("/", (req, res) => {
 
   var result = num1 + num2;
   res.send("The total is " + result);
+
+})
+
+app.post("/subtraction", (req, res) => {
+  //parsed version of the HTTP request
+  console.log(req.body);
+
+  //Number convets parse text to
+  var num1 = Number(req.body.num3);
+  var num2 =  Number(req.body.num4);
+
+  var result = num1 - num2;
+  res.send("The subtraction is " + result);
+
+
 })
 
 app.get("/bmicalculator", (req, res) => {
